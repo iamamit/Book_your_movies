@@ -9,14 +9,13 @@ Database:
 
 Tables:
 
-
-	Movie:
-		name
-		releaseDate
-		certificate
-		length
-		genre
-		description
-		director
+Movie:
+	name
+	releaseDate
+	certificate
+	length
+	genre
+	description
+	director
 	
 	
