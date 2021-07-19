@@ -1,60 +1,41 @@
 ---- User
---
---insert into user(user_id,age,email,name,role) values(1001,25,'amitemail@gmail.com','Amit','Admin');
---insert into user(user_id,age,email,name,role) values(1002,25,'ajeetemail@gmail.com','Ajeet','User');
---insert into user(user_id,age,email,name,role) values(1003,26,'rakeshemail@gmail.com','Rakesh','User');
---insert into user(user_id,age,email,name,role) values(1004,27,'murariemail@gmail.com','Murari','User');
---insert into user(user_id,age,email,name,role) values(1005,25,'shivamemail@gmail.com','Shivam','User');
---insert into user(user_id,age,email,name,role) values(1006,25,'abhishekemail@gmail.com','Abhishek','User');
---insert into user(user_id,age,email,name,role) values(1007,26,'mataemail@gmail.com','Mata','User');
---insert into user(user_id,age,email,name,role) values(1008,25,'umaemail@gmail.com','Uma','User');
---insert into user(user_id,age,email,name,role) values(1009,25,'aarzooemail@gmail.com','Aarzoo','User');
---insert into user(user_id,age,email,name,role) values(1010,23,'rashiemail@gmail.com','Rashi','User');
---
+
+insert into user(user_id,age,email,name,role,password) values(100001,25,'amitemail@gmail.com','Amit','Admin','12345');
+insert into user(user_id,age,email,name,role,password) values(100002,25,'ajeetemail@gmail.com','Ajeet','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100003,26,'rakeshemail@gmail.com','Rakesh','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100004,27,'murariemail@gmail.com','Murari','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100005,25,'shivamemail@gmail.com','Shivam','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100006,25,'abhishekemail@gmail.com','Abhishek','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100007,26,'mataemail@gmail.com','Mata','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100008,25,'umaemail@gmail.com','Uma','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100009,25,'aarzooemail@gmail.com','Aarzoo','User','12345');
+insert into user(user_id,age,email,name,role,password) values(100010,23,'rashiemail@gmail.com','Rashi','User','12345');
+
 --
 ---- Movie
---insert into Movie(movie_id,name,country,rating) values(2001,'Drishyam','India',4.7);
---insert into Movie(movie_id,name,country,rating) values(2002,'PK','India',4.1);
---insert into Movie(movie_id,name,country,rating) values(2003,'Pink','India',3.7);
---insert into Movie(movie_id,name,country,rating) values(2004,'Court','India',4.7);
---insert into Movie(movie_id,name,country,rating) values(2005,'Inception','US',4.7);
---insert into Movie(movie_id,name,country,rating) values(2006,'Shutter Island','US',4.7);
---insert into Movie(movie_id,name,country,rating) values(2007,'Newton','India',4.9);
---insert into Movie(movie_id,name,country,rating) values(2008,'Avengers','US',3.9);
---insert into Movie(movie_id,name,country,rating) values(2009,'October','India',3.6);
---insert into Movie(movie_id,name,country,rating) values(2010,'3Idiots','India',4.8);
---
----- City
---
---insert into city(city_id,name,state,country,pin) values(3001,'Pune','Maharashtra','India',411057);
---insert into city(city_id,name,state,country,pin) values(3002,'Mumbai','Maharashtra','India',400004);
---insert into city(city_id,name,state,country,pin) values(3003,'Nashik','Maharashtra','India',420005);
---insert into city(city_id,name,state,country,pin) values(3004,'Azamgarh','Uttar Pradesh','India',276001);
---insert into city(city_id,name,state,country,pin) values(3005,'Mau','Uttar Pradesh','India',275101);
---insert into city(city_id,name,state,country,pin) values(3006,'Ballia','Uttar Pradesh','India',277001);
---insert into city(city_id,name,state,country,pin) values(3007,'Agra','Uttar Pradesh','India',223007);
---insert into city(city_id,name,state,country,pin) values(3008,'Ahamedabad','Gujarat','India',320008);
---insert into city(city_id,name,state,country,pin) values(3009,'Rajkot','Gujarat','India',360001);
---insert into city(city_id,name,state,country,pin) values(3010,'Vadodara','Gujarat','India',300018);
---insert into city(city_id,name,state,country,pin) values(3011,'Jaipur','Rajasthan','India',302001);
---insert into city(city_id,name,state,country,pin) values(3012,'Kota','Rajasthan','India',323021);
---insert into city(city_id,name,state,country,pin) values(3013,'Jaisalmer','Rajasthan','India',345001);
---insert into city(city_id,name,state,country,pin) values(3014,'Udaipur','Rajasthan','India',313001);
---
----- Cinema
---
---insert into cinema(cinema_id,name,city_city_id) values(4001,'Spice Cinema',3004);
---insert into cinema(cinema_id,name,city_city_id) values(4002,'PVR',3001);
---insert into cinema(cinema_id,name,city_city_id) values(4003,'iMAX',3001);
---insert into cinema(cinema_id,name,city_city_id) values(4004,'Inox',3001);
---insert into cinema(cinema_id,name,city_city_id) values(4005,'Wave',3002);
---insert into cinema(cinema_id,name,city_city_id) values(4006,'Rave',3004);
---insert into cinema(cinema_id,name,city_city_id) values(4007,'Mirrage',3004);
---insert into cinema(cinema_id,name,city_city_id) values(4008,'Bombay Talkies',3002);
---insert into cinema(cinema_id,name,city_city_id) values(4009,'Xion',3001);
---insert into cinema(cinema_id,name,city_city_id) values(4010,'Murli Cinema',3004);
---insert into cinema(cinema_id,name,city_city_id) values(4011,'Gujrat Talkis',3008);
---insert into cinema(cinema_id,name,city_city_id) values(4012,'Big Screen',3008);
---insert into cinema(cinema_id,name,city_city_id) values(4013,'Rahul 70mm',3001);
---insert into cinema(cinema_id,name,city_city_id) values(4014,'Sharda',3004);
---insert into cinema(cinema_id,name,city_city_id) values(4015,'Wanderer',3002);
+insert into Movie(movie_id,name,country,rating) values(200001,'Drishyam','India',4.7);
+insert into Movie(movie_id,name,country,rating) values(200002,'PK','India',4.1);
+insert into Movie(movie_id,name,country,rating) values(200003,'Pink','India',3.7);
+insert into Movie(movie_id,name,country,rating) values(200004,'Court','India',4.7);
+insert into Movie(movie_id,name,country,rating) values(200005,'Inception','US',4.7);
+insert into Movie(movie_id,name,country,rating) values(200006,'Shutter Island','US',4.7);
+insert into Movie(movie_id,name,country,rating) values(200007,'Newton','India',4.9);
+insert into Movie(movie_id,name,country,rating) values(200008,'Avengers','US',3.9);
+insert into Movie(movie_id,name,country,rating) values(200009,'October','India',3.6);
+insert into Movie(movie_id,name,country,rating) values(200010,'3Idiots','India',4.8);
+
+--Address
+insert into address(address_id,city,state,country,pin) values(300001,'Azamgarh','Uttar Pradesh','India',276001);
+insert into address(address_id,city,state,country,pin) values(300002,'Mau','Uttar Pradesh','India',275101);
+insert into address(address_id,city,state,country,pin) values(300003,'Ballia','Uttar Pradesh','India',226001);
+insert into address(address_id,city,state,country,pin) values(300004,'Varanasi','Uttar Pradesh','India',256501);
+
+--Cinema
+insert into cinema(cinema_id,name,address_address_id) values(400001,'Sharda Talkies',300001);
+insert into cinema(cinema_id,name,address_address_id) values(400002,'Vishal Talkies',300001);
+insert into cinema(cinema_id,name,address_address_id) values(400003,'Murli Talkies',300001);
+insert into cinema(cinema_id,name,address_address_id) values(400004,'Durga Talkies',300001);
+
+--Audi
+insert into audi(audi_id,name,cinema_cinema_id) values(500001,'Screen 1',400001);
+insert into audi(audi_id,name,cinema_cinema_id) values(500002,'Screen 2',400001);

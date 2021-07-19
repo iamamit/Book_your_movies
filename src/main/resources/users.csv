@@ -1,0 +1,12 @@
+user_id,name,age,email,password,role
+100001,Amit,26,amit@gmail.com,12345,Admin
+100002,Uma,26,uma@gmail.com,12345,User
+100003,Archana,30,archana@gmail.com,12345,User
+100004,Akasha,22,akash@gmail.com,12345,User
+100005,Ravi,33,ravi@gmail.com,12345,User
+100006,Vipin,15,vipin@gmail.com,12345,User
+100007,Praveen,20,praveen@gmail.com,12345,User
+100008,Anamika,17,anamika@gmail.com,12345,User
+100009,Seema,23,seema@gmail.com,12345,User
+100010,Prema,19,prema@gmail.com,12345,User
+100011,Adarsh,13,adarsh@gmail.com,12345,User

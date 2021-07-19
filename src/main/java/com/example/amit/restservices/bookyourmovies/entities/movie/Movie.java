@@ -21,7 +21,7 @@ public class Movie {
     private Float rating;
 
     @JsonIgnore
-    @ManyToMany
+    @ManyToMany(mappedBy = "movieList")
     private List<Cinema> cinemaList;
 
     public Movie() {

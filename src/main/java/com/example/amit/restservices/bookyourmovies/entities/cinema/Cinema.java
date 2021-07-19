@@ -18,15 +18,15 @@ public class Cinema {
     private Integer id;
     private String name;
 
-    @OneToMany(mappedBy = "cinema")
-    private List<Audi> audiList;
-
-    @ManyToMany(mappedBy = "cinemaList")
-    private List<Movie> movieList;
-
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private Address address;
+
+    @OneToMany(mappedBy = "cinema")
+    private List<Audi> audiList;
+
+    @ManyToMany
+    private List<Movie> movieList;
 
     @OneToMany(mappedBy = "cinema")
     private List<Slot> slotList;

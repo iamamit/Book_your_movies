@@ -8,24 +8,25 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/movies")
 public class MovieController {
 
     @Autowired
     private MovieRepository movieRepository;
 
-    @GetMapping("/movies")
+    @GetMapping("/findall")
     public List<Movie> findAll() {
         return movieRepository.findAll();
     }
 
-    @GetMapping("/movies/{id}")
+    @GetMapping("/findbyid/{id}")
     public Movie findById(@PathVariable int id) {
         Optional<Movie> optionMovie = movieRepository.findById(id);
         Movie movie = optionMovie.get();
         return movie;
     }
 
-    @PostMapping("/movies/createone")
+    @PostMapping("/insert")
     public ResponseEntity save(@RequestBody Movie movie) {
         movieRepository.save(movie);
         return ResponseEntity.status(201).build();

@@ -13,6 +13,7 @@ public class Audi {
 
     @Id
     @GeneratedValue
+    @Column(name = "audi_id")
     private Integer id;
 
     private String name;
