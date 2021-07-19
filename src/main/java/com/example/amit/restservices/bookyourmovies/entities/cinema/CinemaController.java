@@ -1,10 +1,7 @@
-package com.example.amit.restservices.bookyourmovies.cinema;
+package com.example.amit.restservices.bookyourmovies.entities.cinema;
 
-import com.example.amit.restservices.bookyourmovies.movie.Movie;
-import com.example.amit.restservices.bookyourmovies.movie.MovieRepository;
-import com.example.amit.restservices.bookyourmovies.user.User;
-import com.example.amit.restservices.bookyourmovies.user.UserDaoService;
-import com.example.amit.restservices.bookyourmovies.user.UserRepository;
+import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
+import com.example.amit.restservices.bookyourmovies.entities.movie.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

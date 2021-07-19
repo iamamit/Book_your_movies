@@ -1,10 +1,10 @@
-package com.example.amit.restservices.bookyourmovies.cinema;
+package com.example.amit.restservices.bookyourmovies.entities.cinema;
 
-import com.example.amit.restservices.bookyourmovies.audi.Audi;
-import com.example.amit.restservices.bookyourmovies.city.City;
-import com.example.amit.restservices.bookyourmovies.movie.Movie;
+import com.example.amit.restservices.bookyourmovies.entities.address.Address;
+import com.example.amit.restservices.bookyourmovies.entities.audi.Audi;
+import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
+import com.example.amit.restservices.bookyourmovies.entities.slot.Slot;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.beans.factory.support.MethodOverride;
 
 import javax.persistence.*;
 import java.util.List;
@@ -18,18 +18,22 @@ public class Cinema {
     private Integer id;
     private String name;
 
-    @ManyToOne
-    @JsonIgnore
-    private City city;
-
     @OneToMany(mappedBy = "cinema")
     private List<Audi> audiList;
 
-    @OneToMany
+    @ManyToMany(mappedBy = "cinemaList")
     private List<Movie> movieList;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Address address;
+
+    @OneToMany(mappedBy = "cinema")
+    private List<Slot> slotList;
 
     public Cinema() {
     }
+
 
     public Integer getId() {
         return id;
@@ -47,13 +51,6 @@ public class Cinema {
         this.name = name;
     }
 
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
 
     public List<Audi> getAudiList() {
         return audiList;
@@ -71,14 +68,31 @@ public class Cinema {
         this.movieList = movieList;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public List<Slot> getSlotList() {
+        return slotList;
+    }
+
+    public void setSlotList(List<Slot> slotList) {
+        this.slotList = slotList;
+    }
+
     @Override
     public String toString() {
         return "Cinema{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", city=" + city +
                 ", audiList=" + audiList +
                 ", movieList=" + movieList +
+                ", address=" + address +
+                ", slotList=" + slotList +
                 '}';
     }
 }

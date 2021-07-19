@@ -1,7 +1,6 @@
-package com.example.amit.restservices.bookyourmovies.user;
+package com.example.amit.restservices.bookyourmovies.entities.user;
 
-import com.example.amit.restservices.bookyourmovies.movie.Movie;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,9 +15,6 @@ public class User {
     private Integer age;
     private String email;
     private String role;
-
-    @ManyToMany
-    private List<Movie> movieList;
 
     public User() {
     }
@@ -69,14 +65,6 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public List<Movie> getMovieList() {
-        return movieList;
-    }
-
-    public void setMovieList(List<Movie> movieList) {
-        this.movieList = movieList;
     }
 
     @Override

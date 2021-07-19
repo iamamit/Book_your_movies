@@ -1,4 +1,4 @@
-package com.example.amit.restservices.bookyourmovies.cinema;
+package com.example.amit.restservices.bookyourmovies.entities.cinema;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

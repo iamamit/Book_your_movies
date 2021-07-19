@@ -1,10 +1,12 @@
-package com.example.amit.restservices.bookyourmovies.audi;
+package com.example.amit.restservices.bookyourmovies.entities.audi;
 
-import com.example.amit.restservices.bookyourmovies.cinema.Cinema;
-import com.example.amit.restservices.bookyourmovies.movie.Movie;
+import com.example.amit.restservices.bookyourmovies.entities.cinema.Cinema;
+import com.example.amit.restservices.bookyourmovies.entities.seat.Seat;
+import com.example.amit.restservices.bookyourmovies.entities.slot.Slot;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Audi {
@@ -12,13 +14,15 @@ public class Audi {
     @Id
     @GeneratedValue
     private Integer id;
+
     private String name;
+
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private Cinema cinema;
 
-    @OneToOne
-    private Movie movie;
+    @OneToMany(mappedBy = "audi")
+    private List<Seat> seatList;
 
     public Audi() {
     }
@@ -47,12 +51,12 @@ public class Audi {
         this.cinema = cinema;
     }
 
-    public Movie getMovie() {
-        return movie;
+    public List<Seat> getSeatList() {
+        return seatList;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
+    public void setSeatList(List<Seat> seatList) {
+        this.seatList = seatList;
     }
 
     @Override
@@ -61,7 +65,7 @@ public class Audi {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", cinema=" + cinema +
-                ", movie=" + movie +
+                ", seatList=" + seatList +
                 '}';
     }
 }

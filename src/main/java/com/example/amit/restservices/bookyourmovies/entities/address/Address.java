@@ -1,30 +1,30 @@
-package com.example.amit.restservices.bookyourmovies.city;
+package com.example.amit.restservices.bookyourmovies.entities.address;
 
-import com.example.amit.restservices.bookyourmovies.cinema.Cinema;
-import com.example.amit.restservices.bookyourmovies.movie.Movie;
+import com.example.amit.restservices.bookyourmovies.entities.cinema.Cinema;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity
-public class City {
+public class Address {
 
     @Id
     @GeneratedValue
-    @Column(name = "city_id")
+    @Column(name = "address_id")
     private Integer id;
-    private String name;
+    private String city;
     private String State;
     private String country;
     private Integer pin;
 
-    @ManyToMany
-    private List<Movie> movieList;
 
-    @OneToMany(mappedBy = "city")
+    @JsonIgnore
+    @OneToMany(mappedBy = "address")
     private List<Cinema> cinemaList;
 
-    public City() {
+    public Address() {
     }
 
     public Integer getId() {
@@ -35,12 +35,12 @@ public class City {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCity() {
+        return city;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getState() {
@@ -67,14 +67,6 @@ public class City {
         this.pin = pin;
     }
 
-    public List<Movie> getMovieList() {
-        return movieList;
-    }
-
-    public void setMovieList(List<Movie> movieList) {
-        this.movieList = movieList;
-    }
-
     public List<Cinema> getCinemaList() {
         return cinemaList;
     }
@@ -85,13 +77,12 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
+        return "Address{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
                 ", State='" + State + '\'' +
                 ", country='" + country + '\'' +
                 ", pin=" + pin +
-                ", movieList=" + movieList +
                 ", cinemaList=" + cinemaList +
                 '}';
     }

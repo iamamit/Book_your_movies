@@ -1,0 +1,33 @@
+LOAD DATA INFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\imdbtopfiftymovies.csv" INTO TABLE movie
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(movie_id,name,rating,certificate,description,genre,length);
+
+
+
+
+LOAD DATA INFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\city.csv" INTO TABLE city
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(city_id,state,country,name);
+
+
+LOAD DATA INFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\cinema3.csv" INTO TABLE cinema
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(cinema_id,name);
+
+
+LOAD DATA INFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\user2.csv" INTO TABLE user
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 2 LINES
+(user_id,name,age,email,password,role);
+
+LOAD DATA INFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\seat.txt" INTO TABLE seat
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+(seat_id,is_reserved);
