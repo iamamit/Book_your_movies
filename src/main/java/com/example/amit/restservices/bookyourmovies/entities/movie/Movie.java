@@ -24,6 +24,9 @@ public class Movie {
     @ManyToMany
     private List<Cinema> cinemaList;
 
+    @OneToMany(mappedBy = "movie")
+    private List<Slot> slotList;
+
     public Movie() {
     }
 
@@ -67,6 +70,14 @@ public class Movie {
         this.cinemaList = cinemaList;
     }
 
+    public List<Slot> getSlotList() {
+        return slotList;
+    }
+
+    public void setSlotList(List<Slot> slotList) {
+        this.slotList = slotList;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +
@@ -75,6 +86,7 @@ public class Movie {
                 ", country='" + country + '\'' +
                 ", rating=" + rating +
                 ", cinemaList=" + cinemaList +
+                ", slotList=" + slotList +
                 '}';
     }
 }
