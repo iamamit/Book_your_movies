@@ -15,20 +15,13 @@ public class User {
     private String name;
     private Integer age;
     private String email;
+    private String password;
     private String role;
 
     @OneToMany(mappedBy = "user")
     private List<Booking> bookingList;
 
     public User() {
-    }
-
-    public User(Integer id, String name, Integer age, String email, String role) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.role = role;
     }
 
     public Integer getId() {
@@ -53,6 +46,14 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -86,8 +87,10 @@ public class User {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
                 ", bookingList=" + bookingList +
                 '}';
+
     }
 }

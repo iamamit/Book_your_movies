@@ -31,3 +31,10 @@ LOAD DATA INFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\seat.txt" I
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 (seat_id,is_reserved);
+
+
+
+select * from user;
+select * from movie;
+select * from address;
+select * from cinema;

@@ -1,2 +1,8 @@
-package com.example.amit.restservices.bookyourmovies.entities.booking;public interface BookingRepository {
+package com.example.amit.restservices.bookyourmovies.entities.booking;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface BookingRepository extends JpaRepository {
 }

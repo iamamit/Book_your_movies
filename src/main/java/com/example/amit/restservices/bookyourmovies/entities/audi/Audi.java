@@ -13,6 +13,7 @@ public class Audi {
 
     @Id
     @GeneratedValue
+    @Column(name = "audi_id")
     private Integer id;
 
     private String name;
@@ -24,6 +25,7 @@ public class Audi {
     @OneToMany(mappedBy = "audi")
     private List<Seat> seatList;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "audi")
     private List<Slot> slotList;
 

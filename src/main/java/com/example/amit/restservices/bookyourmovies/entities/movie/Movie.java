@@ -24,6 +24,7 @@ public class Movie {
     @ManyToMany
     private List<Cinema> cinemaList;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "movie")
     private List<Slot> slotList;
 

@@ -37,29 +37,4 @@ public class CinemaController {
         return ResponseEntity.status(201).build();
     }
 
-    @GetMapping("/cinemas/addmovie/cinema/{cinemaid}/movie/{movieid}")
-    public ResponseEntity setMovieForCinema(@PathVariable int cinemaid, @PathVariable int movieid) throws Exception {
-        Cinema cinema = cinemaRepository.findById(cinemaid).get();
-        if (null == cinema) throw new Exception("User not found");
-
-        Movie movie = movieRepository.findById(movieid).get();
-        if(null == movie) throw new Exception("No such movie exists");
-
-        List<Cinema> cinemaList = movie.getCinemaList();
-        List<Movie> movieList = cinema.getMovieList();
-        if(null == cinemaList) cinemaList = new ArrayList<>();
-        if(null == movieList) movieList = new ArrayList<>();
-
-        cinemaList.add(cinema);
-        movieList.add(movie);
-
-        movie.setCinemaList(cinemaList);
-        cinema.setMovieList(movieList);
-
-        cinemaRepository.save(cinema);
-        movieRepository.save(movie);
-
-        return ResponseEntity.ok().build();
-
-    }
 }
