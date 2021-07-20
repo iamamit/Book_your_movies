@@ -8,6 +8,7 @@ import java.util.List;
 
 @Entity
 public class User {
+
     @Id
     @GeneratedValue
     @Column(name = "user_id")
@@ -21,21 +22,6 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Booking> bookingList;
 
-    public User() {
-    }
-
-<<<<<<< HEAD
-    public User(Integer id, String name, Integer age, String email, String password, String role) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
-
-=======
->>>>>>> fix/redefine-db
     public Integer getId() {
         return id;
     }
@@ -58,14 +44,6 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getEmail() {
@@ -111,6 +89,5 @@ public class User {
                 ", role='" + role + '\'' +
                 ", bookingList=" + bookingList +
                 '}';
-
     }
 }

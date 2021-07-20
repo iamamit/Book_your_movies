@@ -9,6 +9,7 @@ import com.example.amit.restservices.bookyourmovies.entities.user.User;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 public class Booking {
@@ -26,6 +27,8 @@ public class Booking {
 
     @ManyToOne
     private User user;
+
+    private int isBooked;
 
 
     public Booking() {
@@ -64,6 +67,14 @@ public class Booking {
         this.user = user;
     }
 
+    public int getIsBooked() {
+        return isBooked;
+    }
+
+    public void setIsBooked(int isBooked) {
+        this.isBooked = isBooked;
+    }
+
     @Override
     public String toString() {
         return "Booking{" +
@@ -72,5 +83,18 @@ public class Booking {
                 ", slot=" + slot +
                 ", user=" + user +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return Objects.equals(seat, booking.seat) && Objects.equals(slot, booking.slot);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(seat, slot);
     }
 }
