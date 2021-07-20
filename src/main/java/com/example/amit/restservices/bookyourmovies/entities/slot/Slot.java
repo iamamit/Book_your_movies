@@ -87,6 +87,14 @@ public class Slot {
         this.slotTime = slotTime;
     }
 
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
+
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
+    }
+
     @Override
     public String toString() {
         return "Slot{" +
@@ -96,6 +104,7 @@ public class Slot {
                 ", movie=" + movie +
                 ", slotDate=" + slotDate +
                 ", slotTime=" + slotTime +
+                ", bookingList=" + bookingList +
                 '}';
     }
 }

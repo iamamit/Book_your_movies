@@ -71,6 +71,14 @@ public class User {
         this.role = role;
     }
 
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
+
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -79,6 +87,7 @@ public class User {
                 ", age=" + age +
                 ", email='" + email + '\'' +
                 ", role='" + role + '\'' +
+                ", bookingList=" + bookingList +
                 '}';
     }
 }
