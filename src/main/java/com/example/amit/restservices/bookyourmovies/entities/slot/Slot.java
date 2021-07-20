@@ -4,20 +4,23 @@ import com.example.amit.restservices.bookyourmovies.entities.audi.Audi;
 import com.example.amit.restservices.bookyourmovies.entities.booking.Booking;
 import com.example.amit.restservices.bookyourmovies.entities.cinema.Cinema;
 import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Slot {
 
     @Id
     @GeneratedValue
+    @Column(name = "slot_id")
     private int id;
 
     @ManyToOne
+    @JsonIgnore
     private Cinema cinema;
 
     @ManyToOne
@@ -87,6 +90,14 @@ public class Slot {
         this.slotTime = slotTime;
     }
 
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
+
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
+    }
+
     @Override
     public String toString() {
         return "Slot{" +
@@ -96,6 +107,20 @@ public class Slot {
                 ", movie=" + movie +
                 ", slotDate=" + slotDate +
                 ", slotTime=" + slotTime +
+                ", bookingList=" + bookingList +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Slot slot = (Slot) o;
+        return Objects.equals(cinema, slot.cinema) && Objects.equals(audi, slot.audi) && Objects.equals(movie, slot.movie) && Objects.equals(slotDate, slot.slotDate) && Objects.equals(slotTime, slot.slotTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cinema, audi, movie, slotDate, slotTime);
     }
 }

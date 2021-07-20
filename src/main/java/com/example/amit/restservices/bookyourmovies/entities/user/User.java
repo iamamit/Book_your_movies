@@ -24,6 +24,7 @@ public class User {
     public User() {
     }
 
+<<<<<<< HEAD
     public User(Integer id, String name, Integer age, String email, String password, String role) {
         this.id = id;
         this.name = name;
@@ -33,6 +34,8 @@ public class User {
         this.role = role;
     }
 
+=======
+>>>>>>> fix/redefine-db
     public Integer getId() {
         return id;
     }
@@ -55,6 +58,14 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -81,6 +92,14 @@ public class User {
         this.role = role;
     }
 
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
+
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -90,6 +109,8 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
+                ", bookingList=" + bookingList +
                 '}';
+
     }
 }

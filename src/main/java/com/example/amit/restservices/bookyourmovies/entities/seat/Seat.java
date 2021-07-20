@@ -2,6 +2,7 @@ package com.example.amit.restservices.bookyourmovies.entities.seat;
 
 import com.example.amit.restservices.bookyourmovies.entities.audi.Audi;
 import com.example.amit.restservices.bookyourmovies.entities.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
@@ -13,9 +14,7 @@ public class Seat {
     @Column(name = "seat_id")
     private int id;
 
-    @ManyToOne
-    private User user;
-
+    @JsonIgnore
     @ManyToOne
     private Audi audi;
 
@@ -31,14 +30,6 @@ public class Seat {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public Audi getAudi() {
         return audi;
     }
@@ -51,7 +42,6 @@ public class Seat {
     public String toString() {
         return "Seat{" +
                 "id=" + id +
-                ", user=" + user +
                 ", audi=" + audi +
                 '}';
     }

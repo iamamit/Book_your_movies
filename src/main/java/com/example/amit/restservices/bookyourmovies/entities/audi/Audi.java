@@ -25,6 +25,7 @@ public class Audi {
     @OneToMany(mappedBy = "audi")
     private List<Seat> seatList;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "audi")
     private List<Slot> slotList;
 
