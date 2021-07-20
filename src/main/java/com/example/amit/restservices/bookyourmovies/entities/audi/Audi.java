@@ -25,6 +25,9 @@ public class Audi {
     @OneToMany(mappedBy = "audi")
     private List<Seat> seatList;
 
+    @OneToMany(mappedBy = "audi")
+    private List<Slot> slotList;
+
     public Audi() {
     }
 
@@ -60,6 +63,14 @@ public class Audi {
         this.seatList = seatList;
     }
 
+    public List<Slot> getSlotList() {
+        return slotList;
+    }
+
+    public void setSlotList(List<Slot> slotList) {
+        this.slotList = slotList;
+    }
+
     @Override
     public String toString() {
         return "Audi{" +
@@ -67,6 +78,7 @@ public class Audi {
                 ", name='" + name + '\'' +
                 ", cinema=" + cinema +
                 ", seatList=" + seatList +
+                ", slotList=" + slotList +
                 '}';
     }
 }

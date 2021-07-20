@@ -4,6 +4,8 @@ import com.example.amit.restservices.bookyourmovies.entities.audi.Audi;
 import com.example.amit.restservices.bookyourmovies.entities.cinema.Cinema;
 import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
 import com.example.amit.restservices.bookyourmovies.entities.seat.Seat;
+import com.example.amit.restservices.bookyourmovies.entities.slot.Slot;
+import com.example.amit.restservices.bookyourmovies.entities.user.User;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,19 +17,15 @@ public class Booking {
     @GeneratedValue
     private int id;
 
-    private int movieId;
 
-    private int cinemaId;
+    @ManyToOne
+    private Seat seat;
 
-    private int audiId;
+    @ManyToOne
+    private Slot slot;
 
-    private int seatId;
-
-    @Temporal(TemporalType.DATE)
-    private Date bookedDate;
-
-    @Temporal(TemporalType.TIME)
-    private Date bookedTime;
+    @ManyToOne
+    private User user;
 
 
     public Booking() {
@@ -42,51 +40,37 @@ public class Booking {
         this.id = id;
     }
 
-    public int getMovieId() {
-        return movieId;
+    public Seat getSeat() {
+        return seat;
     }
 
-    public void setMovieId(int movieId) {
-        this.movieId = movieId;
+    public void setSeat(Seat seat) {
+        this.seat = seat;
     }
 
-    public int getCinemaId() {
-        return cinemaId;
+    public Slot getSlot() {
+        return slot;
     }
 
-    public void setCinemaId(int cinemaId) {
-        this.cinemaId = cinemaId;
+    public void setSlot(Slot slot) {
+        this.slot = slot;
     }
 
-    public int getAudiId() {
-        return audiId;
+    public User getUser() {
+        return user;
     }
 
-    public void setAudiId(int audiId) {
-        this.audiId = audiId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public int getSeatId() {
-        return seatId;
-    }
-
-    public void setSeatId(int seatId) {
-        this.seatId = seatId;
-    }
-
-    public Date getBookedDate() {
-        return bookedDate;
-    }
-
-    public void setBookedDate(Date bookedDate) {
-        this.bookedDate = bookedDate;
-    }
-
-    public Date getBookedTime() {
-        return bookedTime;
-    }
-
-    public void setBookedTime(Date bookedTime) {
-        this.bookedTime = bookedTime;
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id=" + id +
+                ", seat=" + seat +
+                ", slot=" + slot +
+                ", user=" + user +
+                '}';
     }
 }
