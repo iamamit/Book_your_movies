@@ -1,28 +1,28 @@
 ---- User
 --
---insert into user(user_id,age,email,name,role) values(1001,25,'amitemail@gmail.com','Amit','Admin');
---insert into user(user_id,age,email,name,role) values(1002,25,'ajeetemail@gmail.com','Ajeet','User');
---insert into user(user_id,age,email,name,role) values(1003,26,'rakeshemail@gmail.com','Rakesh','User');
---insert into user(user_id,age,email,name,role) values(1004,27,'murariemail@gmail.com','Murari','User');
---insert into user(user_id,age,email,name,role) values(1005,25,'shivamemail@gmail.com','Shivam','User');
---insert into user(user_id,age,email,name,role) values(1006,25,'abhishekemail@gmail.com','Abhishek','User');
---insert into user(user_id,age,email,name,role) values(1007,26,'mataemail@gmail.com','Mata','User');
---insert into user(user_id,age,email,name,role) values(1008,25,'umaemail@gmail.com','Uma','User');
---insert into user(user_id,age,email,name,role) values(1009,25,'aarzooemail@gmail.com','Aarzoo','User');
---insert into user(user_id,age,email,name,role) values(1010,23,'rashiemail@gmail.com','Rashi','User');
+insert into user(user_id,age,email,name,role) values(1001,25,'amitemail@gmail.com','Amit','Admin');
+insert into user(user_id,age,email,name,role) values(1002,25,'ajeetemail@gmail.com','Ajeet','User');
+insert into user(user_id,age,email,name,role) values(1003,26,'rakeshemail@gmail.com','Rakesh','User');
+insert into user(user_id,age,email,name,role) values(1004,27,'murariemail@gmail.com','Murari','User');
+insert into user(user_id,age,email,name,role) values(1005,25,'shivamemail@gmail.com','Shivam','User');
+insert into user(user_id,age,email,name,role) values(1006,25,'abhishekemail@gmail.com','Abhishek','User');
+insert into user(user_id,age,email,name,role) values(1007,26,'mataemail@gmail.com','Mata','User');
+insert into user(user_id,age,email,name,role) values(1008,25,'umaemail@gmail.com','Uma','User');
+insert into user(user_id,age,email,name,role) values(1009,25,'aarzooemail@gmail.com','Aarzoo','User');
+insert into user(user_id,age,email,name,role) values(1010,23,'rashiemail@gmail.com','Rashi','User');
 --
 --
 ---- Movie
---insert into Movie(movie_id,name,country,rating) values(2001,'Drishyam','India',4.7);
---insert into Movie(movie_id,name,country,rating) values(2002,'PK','India',4.1);
---insert into Movie(movie_id,name,country,rating) values(2003,'Pink','India',3.7);
---insert into Movie(movie_id,name,country,rating) values(2004,'Court','India',4.7);
---insert into Movie(movie_id,name,country,rating) values(2005,'Inception','US',4.7);
---insert into Movie(movie_id,name,country,rating) values(2006,'Shutter Island','US',4.7);
---insert into Movie(movie_id,name,country,rating) values(2007,'Newton','India',4.9);
---insert into Movie(movie_id,name,country,rating) values(2008,'Avengers','US',3.9);
---insert into Movie(movie_id,name,country,rating) values(2009,'October','India',3.6);
---insert into Movie(movie_id,name,country,rating) values(2010,'3Idiots','India',4.8);
+insert into Movie(movie_id,name,country,rating) values(2001,'Drishyam','India',4.7);
+insert into Movie(movie_id,name,country,rating) values(2002,'PK','India',4.1);
+insert into Movie(movie_id,name,country,rating) values(2003,'Pink','India',3.7);
+insert into Movie(movie_id,name,country,rating) values(2004,'Court','India',4.7);
+insert into Movie(movie_id,name,country,rating) values(2005,'Inception','US',4.7);
+insert into Movie(movie_id,name,country,rating) values(2006,'Shutter Island','US',4.7);
+insert into Movie(movie_id,name,country,rating) values(2007,'Newton','India',4.9);
+insert into Movie(movie_id,name,country,rating) values(2008,'Avengers','US',3.9);
+insert into Movie(movie_id,name,country,rating) values(2009,'October','India',3.6);
+insert into Movie(movie_id,name,country,rating) values(2010,'3Idiots','India',4.8);
 --
 ---- City
 --
