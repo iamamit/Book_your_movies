@@ -11,6 +11,28 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/users")
 public class UserController {
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @PostMapping("/signup")
+    public ResponseEntity userSignup(@RequestBody User user) {
+        userRepository.save(user);
+        return ResponseEntity.ok().build();
+
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity userLogin(@RequestBody User user) throws Exception {
+        String email = user.getEmail();
+
+        List<User> userList = userRepository.findByEmail(email);
+        if(null == userList) throw new Exception("User Nor found");
+
+
+        return ResponseEntity.ok().build();
+
+    }
 }

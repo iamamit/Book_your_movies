@@ -1,14 +1,10 @@
 package com.example.amit.restservices.bookyourmovies.entities.booking;
 
-import com.example.amit.restservices.bookyourmovies.entities.audi.Audi;
-import com.example.amit.restservices.bookyourmovies.entities.cinema.Cinema;
-import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
 import com.example.amit.restservices.bookyourmovies.entities.seat.Seat;
 import com.example.amit.restservices.bookyourmovies.entities.slot.Slot;
 import com.example.amit.restservices.bookyourmovies.entities.user.User;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -79,8 +75,11 @@ public class Booking {
     public String toString() {
         return "Booking{" +
                 "id=" + id +
-                ", seat=" + seat +
-                ", slot=" + slot +
+                ", seat=" + seat.getId() +
+                " audi=" + seat.getAudi().getName() +
+                " Cinema=" + seat.getAudi().getCinema().getName() +
+                ", slot=" + slot.getId() +
+                ", movie=" + slot.getMovie() +
                 ", user=" + user +
                 '}';
     }

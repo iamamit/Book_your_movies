@@ -53,24 +53,44 @@ insert into audi(audi_id,name,cinema_cinema_id) values(500008,'Gold',400003);
 insert into audi(audi_id,name,cinema_cinema_id) values(500009,'Silver',400003);
 
 --Slot
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600001,400001,500001,200001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600002,400001,500001,200002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600003,400001,500001,200003, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600004,400001,500001,200004, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600001,400001,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600002,400001,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600003,400001,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600004,400001,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
 
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600005,400001,500002,200001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600006,400001,500002,200002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600007,400001,500002,200003, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600008,400001,500002,200004, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600005,400001,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600006,400001,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600007,400001,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600008,400001,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
 
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600009,400001,500001,200001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600010,400001,500001,200002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600011,400001,500001,200003, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600012,400001,500001,200004, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600009,400001,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600010,400001,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600011,400001,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600012,400001,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
 
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600013,400001,500002,200001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600014,400001,500002,200002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600015,400001,500002,200003, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600016,400001,500002,200004, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600013,400001,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600014,400001,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600015,400001,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600016,400001,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
 
-insert into slot(slot_id,cinema_cinema_id,audi_audi_id,movie_movie_id,slot_date,slot_time) values(600017,400001,500002,200004, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600017,400002,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600018,400002,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600019,400002,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600020,400002,500001, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600021,400002,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600022,400002,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600023,400002,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600024,400002,500002, parsedatetime('17-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600025,400003,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600026,400003,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600027,400003,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600028,400003,500001, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600029,400004,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('09:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600030,400004,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('12:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600031,400004,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('15:30:00', 'hh:mm:ss') ) ;
+insert into slot(slot_id,cinema_cinema_id,audi_audi_id,slot_date,slot_time) values(600032,400004,500002, parsedatetime('18-09-2012', 'dd-MM-yyyy'), parsedatetime('18:30:00', 'hh:mm:ss') ) ;
+

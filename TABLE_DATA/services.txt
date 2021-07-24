@@ -1,0 +1,26 @@
+User
+    create
+    book movie
+    login
+    booked movie
+    Previously booked movie
+
+Movie
+Movie List
+Insert Movie
+
+Address
+Insert Address
+
+Cinema
+Insert Cinema
+
+
+Audi
+
+Seat
+
+Slot
+
+Booking
+

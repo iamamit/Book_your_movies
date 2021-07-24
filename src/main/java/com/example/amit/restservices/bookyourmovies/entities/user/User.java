@@ -2,6 +2,7 @@ package com.example.amit.restservices.bookyourmovies.entities.user;
 
 import com.example.amit.restservices.bookyourmovies.entities.booking.Booking;
 import com.example.amit.restservices.bookyourmovies.entities.movie.Movie;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,6 +17,8 @@ public class User {
     private String name;
     private Integer age;
     private String email;
+
+    @JsonIgnore
     private String password;
     private String role;
 

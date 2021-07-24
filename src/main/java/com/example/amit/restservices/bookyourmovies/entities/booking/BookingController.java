@@ -8,11 +8,13 @@ import com.example.amit.restservices.bookyourmovies.entities.user.User;
 import com.example.amit.restservices.bookyourmovies.entities.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController("/bookings")
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
+@RequestMapping("/bookings")
 public class BookingController {
 
     @Autowired
@@ -27,7 +29,17 @@ public class BookingController {
     @Autowired
     private BookingRepository bookingRepository;
 
-    @PostMapping("/lock/user/{userId}slot/{slotId}/seat/{seatId}")
+    @GetMapping("/demo")
+    public String demoBookings() {
+        return "Booking Demo";
+    }
+
+    @GetMapping("/findall")
+    public List<Booking> findAllBookings() {
+        return bookingRepository.findAll();
+    }
+
+    @PostMapping("/lock/user/{userId}/slot/{slotId}/seat/{seatId}")
     public ResponseEntity lockSeatForUserAndSlot(@PathVariable int userId, @PathVariable int slotId, @PathVariable int seatId) throws Exception {
 
         User user = userRepository.findById(userId).get();
@@ -39,12 +51,28 @@ public class BookingController {
         Seat seat = seatRepository.findById(seatId).get();
         if(null == seat) throw new Exception("User Not Found Exception");
 
+//        List<Booking> bookingList = bookingRepository.findAllBookingBySlotIdAndSeatId(slot,seat);
+//
+//        if( !(null == bookingList || 0 == bookingList.size()) ) throw new Exception("Seat already booked");
+
         Booking booking = new Booking();
         booking.setSeat(seat);
         booking.setSlot(slot);
         booking.setUser(user);
 
+        List<Locking> lockingList = new ArrayList<>();
+        for(int i = 1; i<9;i++) {
+            User user2 = userRepository.findById(i+userId).get();
+            Locking locking = new Locking(booking,user2);
+            lockingList.add(locking);
 
+        }
+
+        for(Locking locking: lockingList) {
+            locking.start();
+        }
+
+//        bookingRepository.save(booking);
 
         return ResponseEntity.ok().build();
     }

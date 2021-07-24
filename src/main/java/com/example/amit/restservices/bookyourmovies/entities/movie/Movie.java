@@ -2,10 +2,10 @@ package com.example.amit.restservices.bookyourmovies.entities.movie;
 
 import com.example.amit.restservices.bookyourmovies.entities.cinema.Cinema;
 import com.example.amit.restservices.bookyourmovies.entities.slot.Slot;
-import com.example.amit.restservices.bookyourmovies.entities.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -19,6 +19,9 @@ public class Movie {
     private String name;
     private String country;
     private Float rating;
+
+    @Lob
+    private String poster;
 
     @JsonIgnore
     @ManyToMany(mappedBy = "movieList")
@@ -63,6 +66,14 @@ public class Movie {
         this.rating = rating;
     }
 
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
+
     public List<Cinema> getCinemaList() {
         return cinemaList;
     }
@@ -86,6 +97,7 @@ public class Movie {
                 ", name='" + name + '\'' +
                 ", country='" + country + '\'' +
                 ", rating=" + rating +
+                ", poster=" + poster +
                 ", cinemaList=" + cinemaList +
                 ", slotList=" + slotList +
                 '}';
